@@ -7,10 +7,15 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatProgressSpinnerModule,
+  MatDividerModule,
+  MatChipsModule
 } from '@angular/material';
 
-const myModule = [MatCardModule, MatButtonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule];
+const myModule = [MatCardModule, MatButtonModule, MatMenuModule,
+  MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatProgressSpinnerModule,
+  MatDividerModule, MatChipsModule];
 
 @NgModule({
   declarations: [],

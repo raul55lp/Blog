@@ -15,6 +15,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { environment } from 'src/environments/environment';
     AngularFireStorageModule,
     AppRoutingModule,
     NewPostModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireAuthModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: StorageBucket, useValue: 'ngblog-6cb46.appspot.com' }],
   bootstrap: [AppComponent]

@@ -15,12 +15,17 @@ import {
   MatInputModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatDialogModule,
+  MatSelectModule,
+
 } from '@angular/material';
 
 const myModule = [MatCardModule, MatButtonModule, MatMenuModule,
   MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatProgressSpinnerModule,
-  MatDividerModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule];
+  MatDividerModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule,
+  MatDialogModule, MatSelectModule,
+];
 
 @NgModule({
   declarations: [],

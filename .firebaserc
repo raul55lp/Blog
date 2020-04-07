@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngblog-6cb46": {
+      "hosting": {
+        "blog": [
+          "ngblog-6cb46"
+        ]
+      }
+    }
+  }
+}

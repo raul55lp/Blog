@@ -32,8 +32,13 @@ export class PostService {
   public deletePostById(post: PostI) {
     return this.postCollection.doc(post.id).delete();
   }
-  public editPostById(post: PostI) {
-    return this.postCollection.doc(post.id).update(post);
+  public editPostById(post: PostI, newImage?: FileI) {
+
+    if (newImage) {
+      this.uploadIMage(post, newImage);
+    } else {
+      return this.postCollection.doc(post.id).update(post);
+    }
   }
   private savePost(post: PostI) {
     const postObj = {
@@ -43,7 +48,11 @@ export class PostService {
       fileRef: this.filePath,
       tagsPost: post.tagsPost
     };
-    this.postCollection.add(postObj);
+    if (post.id) {
+      return this.postCollection.doc(post.id).update(postObj);
+    } else {
+      return this.postCollection.add(postObj);
+    }
   }
   public preAddPost(post: PostI, image: FileI): void {
     this.uploadIMage(post, image);

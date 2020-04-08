@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { PostService } from '../../posts/post.service';
-import { PostI } from '../../../shared/models/post.interface';
 import { Observable } from 'rxjs';
+import { PostService } from 'src/app/components/posts/post.service';
+import { Component, OnInit } from '@angular/core';
+import { PostI } from 'src/app/shared/models/post.interface';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+
   public posts$: Observable<PostI[]>;
+
   constructor(private postSvc: PostService) { }
 
   ngOnInit() {
-    // this.postSvc.getAllPosts().subscribe(res => console.log('POSTS', res)
-    // );
     this.posts$ = this.postSvc.getAllPosts();
   }
 
